@@ -1,0 +1,65 @@
+<app-search-bar [item]="isDetailPage"></app-search-bar>
+<div id="detailPage">
+    <div id="relatedDeviceBox">
+        <div class="mx-3">
+            <h2>
+                Related Devices
+            </h2>
+        </div>
+        <div class="list-group" *ngFor="let d of devices">
+            <a (click)="onClickDevice(d)" class="list-group-item list-group-item-action" id="device_row">
+                <div class="grid">
+                    <div class="row">
+                        <div class="col">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon"> {{d.device_icon}}
+                            </mat-icon>
+                        </div>
+                        <div class="col">
+                            {{d.device_name}}
+                            <br>
+                            Status: {{d.device_status}}
+                        </div>
+                        <div class="col">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">info</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="detailBox">
+        <div class="mx-5">
+            <h2>
+                Details: {{device.device_name}}
+            </h2>
+        </div>
+        <div>
+            <div class="grid">
+                <div class="row">
+                    <div class="col">
+                        Status: {{device.device_status}}
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Temperature: {{device.device_temperature}}
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Usage:
+                    </div>
+                </div>
+                <div class="row">
+                    <img [src]="device.device_usage" alt="device.device_usage">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

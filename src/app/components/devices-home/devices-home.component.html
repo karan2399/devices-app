@@ -1,0 +1,51 @@
+<app-search-bar></app-search-bar>
+<div>
+    <div class="grid">
+        <div class="row">
+            <div class="col-8">
+                <form [formGroup]="filterForm">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Filters</mat-label>
+                        <mat-select [formControl]="filterDropDown" #myFilterSelect
+                            (selectionChange)='onOptionsSelected(myFilterSelect.value)'>
+                            <mat-option value="all">
+                                Clear Filters
+                            </mat-option>
+                            <mat-option value="available">
+                                Available
+                            </mat-option>
+                            <mat-option value="not-available">
+                                Not Available
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </div>
+            <div class="col">
+                <h1>
+                    Total Devices: {{total}}
+                </h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="list-group" *ngFor="let device of devices">
+    <a (click)="onClickDevice(device)" class="list-group-item list-group-item-action" id="device_row">
+        <div class="grid">
+            <div class="row">
+                <div class="col">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon"> {{device.device_icon}}</mat-icon>
+                </div>
+                <div class="col">
+                    {{device.device_name}}
+                    <br>
+                    Status: {{device.device_status}}
+                </div>
+                <div class="col">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">info</mat-icon>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,21 @@
+*{
+    margin:10px;
+    justify-content: center;
+}
+
+#detailPage {
+    display: flex;
+    flex:50%;
+    flex-direction: row;
+}
+
+#relatedDeviceBox{
+    flex: 50%;
+}
+#detailBox{
+    flex: 50%;
+}
+#device_row {
+    cursor: pointer;
+    background-color:rgb(198, 198, 221);
+}

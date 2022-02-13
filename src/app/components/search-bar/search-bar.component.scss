@@ -1,0 +1,16 @@
+*{
+    // margin-left:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#suggestion_col {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#suggestion_col:hover {
+    background-color: lightblue;
+}

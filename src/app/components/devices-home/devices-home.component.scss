@@ -1,0 +1,16 @@
+*{
+    margin:10px;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    width: 100%;
+}
+
+#flexBox {
+    display: flex;
+}
+#device_row {
+    cursor: pointer;
+    background-color:rgb(198, 198, 221);
+}
