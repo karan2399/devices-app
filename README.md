@@ -19,18 +19,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 
-## Running the nodejs api project.
-
-Please first run the nodejs api project with 'node index.js' Angular Project devices will fetch api response from localhost:3000
-
-## Use Cases Answers:
-Answer the questions from the testing perspective
-
-Answer: I would prefer the Style#1. Because from a developer's perspective, it will be easy for me to undestand the work flow and make decisions based on that.
-I would not choose the Style#2 beacuse ensuring everything will not be enough in order to make the application robust and portable.
-The tests that I think we should run are 
-1. Home page displays all devices
-2. Search bar is functional as required
-3. On Clicking the device, it redirects to detail page with it's details.
-4. Clicking on Cancel, removes the search options shown
-5. Search Bar is non functional on the device detail page
